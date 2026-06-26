@@ -1,6 +1,6 @@
 # 🐧 Linux Fundamentals & System Administration
 
-Mastering the Linux operating system is the absolute baseline for any DevOps and Cloud Engineer. This directory contains my comprehensive documentation, cheat sheets, and practical lab notes on system administration, configuration, and security.
+Mastering the Linux operating system is the absolute baseline for any DevOps and Cloud Engineer. This directory contains my comprehensive documentation, cheat sheets, and practical lab notes on system administration, networking, and security.
 
 ---
 
@@ -20,6 +20,10 @@ To keep things organized and highly scannable, I have divided my Linux notes int
 *Resource monitoring, process lifecycle control, and real-time system performance analysis.*
 * **Key Focus:** Tracking CPU/RAM usage (`top`, `htop`, `free`), disk allocation checks (`df -h`), and managing background processes (`&`, `bg`, `fg`).
 
+### 🌐 [4. Networking, Troubleshooting & Packages](./networking-and-packages.md)
+*DNS lookups, tracking listening ports, network streaming, and automated package distribution.*
+* **Key Focus:** Port identification (`ss -tulpn`), API testing (`curl`), and stream pipeline manipulation (`|`, `>`).
+
 ---
 
 ## 🛠️ Hands-On Labs Completed
@@ -29,9 +33,9 @@ To keep things organized and highly scannable, I have divided my Linux notes int
 - Transferred public keys to target instances to configure passwordless, secure login.
 - Modified `/etc/ssh/sshd_config` to strictly enforce key-based authentication.
 
-### Lab 2: Safe Server Log Rotation Inspection
-- Used text manipulation combinations like `grep -i "error" /var/log/nginx/error.log` to isolate application issues.
-- Mastered pipeline streaming using `tail -f` alongside standard output redirections (`>` and `>>`).
+### Lab 2: Network Port & Target Connectivity Verification
+- Verified active daemon binding by piping socket stats to grep: `ss -tulpn | grep 80`.
+- Inspected remote server responses and response headers over standard protocols using `curl -I`.
 
 ---
 
@@ -39,9 +43,10 @@ To keep things organized and highly scannable, I have divided my Linux notes int
 
 | Objective | Command | Real-World DevOps Context |
 | :--- | :--- | :--- |
-| **Check Active Daemons** | `ps aux \| grep nginx` | Verifying if a web server process is actively handling requests. |
+| **Check Active Daemons** | `ps aux \| grep nginx` | Verifying if a web server process is actively handling traffic. |
+| **Audit Listening Ports** | `ss -tulpn` | Checking if your app or container bound properly to its port. |
 | **Live Log Tailing** | `tail -f /var/log/syslog` | Monitoring system errors live during deployment failures. |
-| **Fix Key Permissions** | `chmod 600 ~/.ssh/id_rsa` | Restricting private SSH key access so the SSH client doesn't reject it. |
+| **Fix Key Permissions** | `chmod 600 ~/.ssh/id_rsa` | Restricting private SSH key access so the client doesn't reject it. |
 | **Storage Audit** | `df -h` | Diagnosing out-of-disk-space issues on application servers. |
 
 ---
