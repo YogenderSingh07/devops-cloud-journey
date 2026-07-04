@@ -11,9 +11,9 @@ Application
      │
 Transport
      │
-Internet
+Network
      │
-Network Access
+Physical 
 ```
 
 Compared to the OSI model, some layers are combined because they work closely together in real-world networking.
@@ -112,7 +112,7 @@ Used for:
 
 ---
 
-# Layer 2 — Internet Layer
+# Layer 2 — Network Layer
 
 The Internet Layer is responsible for moving packets between different networks.
 
@@ -141,7 +141,7 @@ Whenever a packet reaches a router, the router examines the destination IP addre
 
 ---
 
-# Layer 1 — Network Access Layer
+# Layer 1 — Physical Layer
 
 This is the lowest layer of the TCP/IP model.
 
@@ -193,9 +193,9 @@ The TCP/IP model groups several OSI layers together.
 | Presentation | Application    |
 | Session      | Application    |
 | Transport    | Transport      |
-| Network      | Internet       |
-| Data Link    | Network Access |
-| Physical     | Network Access |
+| Network      | Network        |
+| Data Link    | Physical       |
+| Physical     | Physical       |
 
 ---
 
@@ -205,8 +205,8 @@ This is how I remember the TCP/IP model:
 
 * **Application Layer** → Creates and uses network services.
 * **Transport Layer** → Decides how data should be delivered.
-* **Internet Layer** → Determines where packets should go using IP addresses.
-* **Network Access Layer** → Delivers packets across the local network using MAC addresses and physical media.
+* **Network Layer** → Determines where packets should go using IP addresses.
+* **Physical Layer** → Delivers packets across the local network using MAC addresses and physical media.
 
 Unlike the OSI model, the TCP/IP model isn't just a way to explain networking—it is the model that the Internet actually uses today.
 
