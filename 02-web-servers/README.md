@@ -43,3 +43,6 @@ In production:
 Many production environments even use **both together**, with Nginx acting as the frontend proxy and Apache serving backend requests.
 
 ---
+
+🪟 *Next Phase: [03-Networking/](../03-Networking/) -> Moving on from Web servers to Understanding networking fundamentals (devices,protocols,models).*
+
